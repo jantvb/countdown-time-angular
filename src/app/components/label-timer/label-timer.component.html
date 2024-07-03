@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+        <h1 class="card-title">Countdown timer</h1>
+    </div>
+    <div class="card-body">
+        <div class="card-timer">
+            <p>{{hours}}</p> <p>:</p> <p>{{minutes}}</p> <p>:</p> <p>{{seconds}}</p>
+        </div>
+        <div class="card-actions">
+            <button (click)="pause()">{{buttonText}}</button><button (click)="reset()">Reset</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        <h1 class="card-title">Countdown timer</h1>
+    </div>
+
+    <div class="card-body">
+        <form [formGroup]="form">
+            <input 
+                formControlName="hour"
+                placeholder="HH"
+                maxlength="2"
+                (keypress)="onlyNumbers($event)"> : 
+            <input 
+                formControlName="minute"
+                placeholder="MM"
+                maxlength="2"
+                (keypress)="onlyNumbers($event)"
+                (input)="checkMaxTime('minute')"> : 
+            <input 
+                formControlName="second"
+                placeholder="SS"
+                maxlength="2"
+                (keypress)="onlyNumbers($event)"
+                (input)="checkMaxTime('second')"> 
+            <button (click)="start()">Start</button>
+        </form>
+    </div>
+</div>
+
